@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyStudyLife | Student Planner</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="home.css">
+  <script src="home.js"></script>
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <i class="fas fa-graduation-cap"></i>
+    <p>MyStudyLife</p>
+  </div>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">MyStudyLife</div>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </nav>
+    <div class="auth-buttons">
+  <button onclick="openModal('signupModal')" class="signin">Sign In</button>
+  <button onclick="openModal('loginModal')" class="login">Log In</button>
+</div>
+ <!-- SIGNUP POPUP -->
+<div id="signupModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signupModal')">&times;</span>
+    <h2>Sign Up</h2>
+    <form id="signupForm" onsubmit="handleSignup(event)">
+      <input type="email" id="signupEmail" name="email" placeholder="Enter Email" required>
+      <input type="password" id="signupPassword" name="password" placeholder="Enter Password" required>
+      <button type="submit" class="signin">Sign Up</button>
+    </form>
+    <div id="signupError" style="color: red; margin-top: 10px; display: none;"></div>
+    <div id="signupSuccess" style="color: green; margin-top: 10px; display: none;"></div>
+  </div>
+</div>
+
+<!-- LOGIN POPUP -->
+<div id="loginModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Log In</h2>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+      <input type="email" id="loginEmail" name="email" placeholder="Enter Email" required>
+      <input type="password" id="loginPassword" name="password" placeholder="Enter Password" required>
+      <button type="submit" class="login">Log In</button>
+    </form>
+    <div id="loginError" style="color: red; margin-top: 10px; display: none;"></div>
+    <div id="loginSuccess" style="color: green; margin-top: 10px; display: none;"></div>
+  </div>
+</div>
+
+
+    
+  </header>
+
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1 class="heading"></h1>
+      <p>An AI-powered chatbot designed to help students with career guidance, study support, and answering academic queries instantly.</p>
+      <a href="#" class="btn-primary">Get Started Free</a>
+    </div>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQQlrQhbxA9E74GohpknKA1Wv_UV1Bt-rCX7bmwDsqoCw_-jUHD-tR2b7h4Fkxw8ol9h4&usqp=CAU" height="500px" width="500px" alt="Success Steps">
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="whychose">
+      <div class="headingwhy">
+        <h1>Why Choose smart study assistant?</h1>
+        <p>Discover the powerful features that make learning easier and more effective</p>
+      </div>
+      <div class="boxs">
+        <div class="box">
+          <i class="fa-solid fa-book"></i>
+          <p>Get instant help with homework, explanations of complex concepts, and study strategies tailored to your learning style.</p>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-user-graduate"></i>
+          <h3>Career Guidance</h3>
+          <p>Explore career paths, get advice on course selection, and receive personalized recommendations for your future.</p>
+        </div>
+        <div class="box">
+          <i class="fa-solid fa-comments"></i>
+          <h3>Instant Answers</h3>
+          <p>Ask any academic question and get detailed, accurate answers instantly. Available 24/7 whenever you need help.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="About">
+    <h1>About smart study assistant</h1>
+    <p>Our AI assistant is built specifically for students, combining advanced natural language processing with educational expertise. We understand the challenges students face and provide personalized, intelligent support to help you succeed in your academic journey.</p>
+  </section>
+
+  <!-- FEATURES ROW -->
+  <section class="features-row">
+    <div class="feature-item">
+      <i class="fas fa-star star-icon"></i>
+      <h4>Smart & Adaptive</h4>
+      <p>Learns from your interactions to provide increasingly personalized assistance.</p>
+    </div>
+    <div class="feature-item">
+      <i class="fas fa-user-friends user-icon"></i>
+      <h4>Student-Focused</h4>
+      <p>Designed specifically for students with features that address real academic needs.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <h1>Smart study assistant</h1>
+      <p>Your AI-powered study companion for academic success.</p>
+      <a href="#">Privacy policy</a>
+      <a href="#">Terms of service</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+
+
+</body>
+</html>
