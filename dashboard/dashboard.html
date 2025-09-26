@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+ <title>Push Sidebar</title>
+ 
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <section>
+    <nav class="navbar bg-body-tertiary">
+      <div class="slidbtn">
+        <button id="slider-btn" onclick="slidbar()">☰</button>
+      </div>
+      <a href="/auth/logout" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+    </nav>
+  </section>
+  
+  <div class="slider" id="slider">
+    <h2>Menu</h2>
+    <div class="menu">
+      <button>Home</button><br>
+      <button>Dashboard</button><br>
+      <button>Planner</button><br>
+      <button>AI Chatbot</button><br>
+      <button>AI Quizzes</button><br>
+      <button>Notes Summariser</button><br>
+      <button>Reminder</button><br>
+      <button>Progress</button><br>
+    </div>
+  </div>
+
+  <div class="slider" id="slider">
+  <h2>Menu</h2>
+  <div class="menu">
+    <button onclick="window.location.href='/'">Home</button><br>
+    <button onclick="window.location.href='/dashboard/dashboard'">Dashboard</button><br>
+    <button onclick="window.location.href='/planner/planner'">Planner</button><br>
+    <button onclick="window.location.href='/chatbot/'">AI Chatbot</button><br>
+    <button onclick="window.location.href='/quizzes/quizzes'">AI Quizzes</button><br>
+    <button onclick="window.location.href='/notes_sumariser/sumariser'">Notes Summariser</button><br>
+    <button onclick="window.location.href='/reminders/reminders'">Reminder</button><br>
+    <button onclick="window.location.href='/progress/progress'">Progress</button><br>
+    <button onclick="window.location.href='/auth/logout'">Logout</button><br>
+    
+  </div>
+</div>
+
+
+  <div class="dashboard">
+    <h1>📊 Smart Study Dashboard</h1>
+<div class="cards">
+  <div class="card"><h3>Study Time</h3><p id="studyTime">0h 0m</p></div>
+  <div class="card"><h3>Topics Completed</h3><p id="topics">0</p></div>
+  <div class="card"><h3>Quiz Performance</h3><p id="quiz">0%</p></div>
+  <div class="card"><h3>Focus Score</h3><p id="focus">0 / 10</p></div>
+</div>
+
+
+<div class="charts">
+  <canvas id="studyTrend"></canvas>
+  <canvas id="quizTrend"></canvas>
+</div>
+
+  </div>
+
+  
+  <script src="dashboard.js"></script>
+</body>
+</html>
