@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Chatbot</title>
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="slidbtn">
+      <button id="slider-btn" onclick="slidbar()">☰</button>
+    </div>
+    <h1>📘 Smart Study Planner</h1>
+    <a href="logout.html" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  </nav>
+  
+  <!-- Sidebar -->
+  <!-- <div class="slider" id="slider">
+    <h2>Menu</h2>
+    <div class="menu">
+      <button>Home</button>
+      <button>About</button>
+      <button>Contact</button>
+      <button>AI Chatbot</button>
+      <button>AI Quizzes</button>
+      <button>Notes Summariser</button>
+      <button>Reminder</button>
+      <button>Progress</button>
+    </div>
+  </div> -->
+
+  <div class="slider" id="slider">
+  <h2>Menu</h2>
+  <div class="menu">
+    <button onclick="window.location.href='/'">Home</button><br>
+    <button onclick="window.location.href='/dashboard/dashboard'">Dashboard</button><br>
+    <button onclick="window.location.href='/planner/planner'">Planner</button><br>
+    <button onclick="window.location.href='/chatbot'">AI Chatbot</button><br>
+    <button onclick="window.location.href='/quizzes/quizzes'">AI Quizzes</button><br>
+    <button onclick="window.location.href='/note-summariser'">Notes Summariser</button><br>
+    <button onclick="window.location.href='/reminders/reminders'">Reminder</button><br>
+    <button onclick="window.location.href='/progress/progress'">Progress</button><br>
+    <button onclick="window.location.href='/auth/logout'">Logout</button><br>
+  </div>
+</div>
+
+
+  <!-- Main Content -->
+  <div class="content">
+    <div class="chat-container">
+      <div class="chat-header">🤖 AI Chatbot</div>
+      <div class="chat-box" id="chat-box">
+        <div class="message bot-message">Hello! How can I help you today?</div>
+      </div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type a message...">
+        <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+  </div>
+
+  
+</body>
+</html>
