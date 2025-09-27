@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <title>Smart Study Planner</title>
+ <link rel="stylesheet" href="planner.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="slidbtn">
+      <button id="slider-btn" onclick="slidbar()" class="action-btn">☰</button>
+    </div>
+    <h1>📘 Smart Study Planner</h1>
+    <a href="logout.html" class="action-btn"><i class="fa-solid fa-right-from-bracket"></i> Logout</a>
+  </nav>
+
+  <!-- Sidebar -->
+  <div class="slider" id="slider">
+    <button class="action-btn close-btn" onclick="slidbar()">✖</button>
+    <h2>Menu</h2>
+    <div class="menu">
+      <button onclick="window.location.href='dashboard.html'">
+        <i class="fa-solid fa-house"></i> Dashboard
+      </button>
+      <button onclick="window.location.href='notes.html'">
+        <i class="fa-solid fa-book"></i> Notes Manager
+      </button>
+      <button onclick="window.location.href='planner.html'" class="active">
+        <i class="fa-solid fa-calendar-days"></i> Study Planner
+      </button>
+      <button onclick="window.location.href='reminder.html'">
+        <i class="fa-solid fa-bell"></i> Reminders
+      </button>
+      <button onclick="window.location.href='chatbot.html'">
+        <i class="fa-solid fa-comments"></i> AI Chatbot
+      </button>
+      <button onclick="window.location.href='video.html'">
+        <i class="fa-solid fa-video"></i> Video Summarizer
+      </button>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>📅 Study Planner</h2>
+
+    <!-- Mode Selection -->
+    <div class="mode-selection">
+      <button onclick="switchMode('manual')" id="manualBtn">📝 Manual Mode</button>
+      <button onclick="switchMode('ai')" id="aiBtn">🤖 AI Mode</button>
+    </div>
+
+    <!-- Manual Mode -->
+    <div id="manualSection" class="task-inputs">
+      <select id="daySelect">
+        <option>Monday</option>
+        <option>Tuesday</option>
+        <option>Wednesday</option>
+        <option>Thursday</option>
+        <option>Friday</option>
+        <option>Saturday</option>
+        <option>Sunday</option>
+      </select>
+      <input type="text" id="taskInput" placeholder="Enter task">
+      <button onclick="addTask()">Add Task</button>
+      <button onclick="saveManualSchedule()">💾 Save Schedule</button>
+      <button onclick="clearManualSchedule()">🗑 Clear All</button>
+    </div>
+
+    <!-- AI Mode -->
+    <div id="aiSection" class="task-inputs">
+      <input type="text" id="subjectsInput" placeholder="Enter subjects (comma separated)">
+      <input type="number" id="timeInput" placeholder="Hours per day">
+      <button onclick="generateAISchedule()">🤖 Generate Schedule</button>
+    </div>
+
+    <!-- Schedule Display -->
+    <table id="plannerTable">
+      <thead>
+        <tr><th>Day</th><th>Tasks</th><th>Actions</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Monday</td><td class="tasks-cell">No tasks</td><td><button class="delete-day-btn" onclick="deleteAllTasks('Monday')">🗑 Clear Day</button></td></tr>
+        <tr><td>Tuesday</td><td class="tasks-cell">No tasks</td><td><button class="delete-day-btn" onclick="deleteAllTasks('Tuesday')">🗑 Clear Day</button></td></tr>
+        <tr><td>Wednesday</td><td class="tasks-cell">No tasks</td><td><button class="delete-day-btn" onclick="deleteAllTasks('Wednesday')">🗑 Clear Day</button></td></tr>
+        <tr><td>Thursday</td><td class="tasks-cell">No tasks</td><td><button class="delete-day-btn" onclick="deleteAllTasks('Thursday')">🗑 Clear Day</button></td></tr>
+        <tr><td>Friday</td><td class="tasks-cell">No tasks</td><td><button class="delete-day-btn" onclick="deleteAllTasks('Friday')">🗑 Clear Day</button></td></tr>
+        <tr><td>Saturday</td><td class="tasks-cell">No tasks</td><td><button class="delete-day-btn" onclick="deleteAllTasks('Saturday')">🗑 Clear Day</button></td></tr>
+        <tr><td>Sunday</td><td class="tasks-cell">No tasks</td><td><button class="delete-day-btn" onclick="deleteAllTasks('Sunday')">🗑 Clear Day</button></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="planner.js"></script>
+</body>
+</html>
