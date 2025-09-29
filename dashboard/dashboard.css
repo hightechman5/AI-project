@@ -8,7 +8,7 @@
     /* background-image: url("c:\Users\HP\AppData\Local\Microsoft\Windows\INetCache\IE\38LPQ6DI\Gemini_Generated_Image.png"); */
 
     /* ✅ Use relative path (same folder me image ho to) */
-    background-image: url("photo1.png");
+    background-image: url("/img/dashboard.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -56,7 +56,7 @@
   .slidbtn button {
    width: 40px;
    height: 40px;
-   background-color: rgb(15, 16, 17);
+   background-color: rgb(18, 19, 20);
    color: white;
    border: none;
    cursor: pointer;
@@ -82,19 +82,7 @@
     margin-left: 200px;
   }
 
-  /* ❌ Duplicate sidebar - already defined above
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 240px;
-    height: 100%;
-    background: linear-gradient(180deg, #007bff, #0056b3);
-    padding: 20px;
-    color: white;
-    font-family: Arial, sans-serif;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.2);
-  } */
+  
 
   /* Menu title */
   .slider h2 {
@@ -146,7 +134,7 @@
   */
 
   .dashboard { max-width:1200px; margin:20px auto; padding:20px; }
-  h1 { text-align:center; margin-bottom:20px; color:#333; }
+  h1 { text-align:center; margin-bottom:20px; color:#ffffff; }
   .cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; }
   .card h3 { margin:0 0 10px; font-size:18px; color:#444; }
   .card p { font-size:24px; font-weight:bold; color:#007bff; margin:0; }
@@ -154,7 +142,7 @@
   canvas { background:#fff; border-radius:12px; box-shadow:0 3px 6px rgba(0,0,0,0.1); padding:10px; }
 
   .logout-btn {
-    background: #111;
+    background: #0e0e0e;
     color: white;
     padding: 10px 15px;
     border-radius: 6px;
